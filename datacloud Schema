@@ -1,0 +1,25 @@
+openapi: 3.0.3
+components:
+  schemas:
+    Box:
+      type: object
+      properties:
+        Boxenterpriseid:
+          type: number
+        BoxFolderID:
+          type: number
+        BoxFileID:
+          type: number
+        BoxFilename:
+          type: string
+        Boxfoldername:
+          type: string
+        BoxMetadatatemplate:
+          type: string
+        BoxMetadataAttribute:
+          type: number
+        Boxuser:
+          type: string
+          format: email
+        boxuserid:
+          type: string

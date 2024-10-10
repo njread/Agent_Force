@@ -1,0 +1,11 @@
+curl --location 'https://api.box.com/2.0/ai/extract' \     
+--header 'Authorization: Bearer wuCOSg6s5rwiqUGTL4XSfxOM7Fh8P5Ii' \         
+--data '{                                                                  
+    "prompt": "\"fields\":[{\"type\":\"string\",\"key\":\"total\",\"displayName\":\"Total\",\"description\":\"Total Cost of Order Form\",\"prompt\":\"Total is always at the bottom of the\"},{\"type\":\"date\",\"key\":\"last_contacted_at\",\"displayName\":\"Last Contacted At\",\"description\":\"When this customer was last contacted at\"}]",                                                     
+    "items": [
+        {
+            "type": "file",
+            "id": "1558720117689"
+        }
+    ]
+}'

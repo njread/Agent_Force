@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>A New Box Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>A New Box Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>make_a_Box_file_record</name>
+        <label>make a Box file record</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <inputAssignments>
+            <field>BoxFile__c</field>
+            <value>
+                <elementReference>$Record.BoxFileID__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>File_Name__c</field>
+            <value>
+                <elementReference>$Record.BoxFilename__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>BoxFile__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>make_a_Box_file_record</targetReference>
+        </connector>
+        <object>Box_DataCloud_POC_BEN_Box_D00CE23E__dlm</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>DataCloudDataChange</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

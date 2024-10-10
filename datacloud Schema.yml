@@ -1,0 +1,49 @@
+openapi: 3.0.3
+info:
+  title: Box Data API
+  version: 1.0.0
+  description: API to access data from Box
+paths: {}
+components:
+  schemas:
+    Box:
+      type: object
+      properties:
+        Boxenterpriseid:
+          type: number
+        itemID:
+          type: number
+        itemType:
+          type: string
+        BoxFolderID:
+          type: number
+        BoxFileID:
+          type: number
+        BoxFilename:
+          type: string
+        BoxFiletype:
+          type: string
+        BoxFoldername:
+          type: string
+        BoxMetadatatemplate:
+          type: string
+        BoxMetadataAttribute:
+          type: string
+        Boxuser:
+          type: string
+          format: email
+        Boxuserid:
+          type: number
+        BoxeventTime:
+          type: string
+          format: date-time
+        BoxCollaborator:
+          type: string
+        BoxCountOfPreviews:
+          type: number
+        BoxCountOfDownloads:
+          type: number
+        BoxFolderID_Text:
+          type: string
+        BoxFileID_Text:
+          type: string

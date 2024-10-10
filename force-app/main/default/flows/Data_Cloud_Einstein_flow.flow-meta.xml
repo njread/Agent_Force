@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Summarize_Data_Cloud_Entry</name>
+        <label>Summarize Data Cloud Entry</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <actionName>summarizeRecord</actionName>
+        <actionType>summarizeRecord</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.itemID__c</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>summarizeRecord</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>61.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Data Cloud Einstein flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Data Cloud Einstein flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Summarize_Data_Cloud_Entry</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>BoxMetadataAttribute__c</field>
+            <operator>Contains</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Box_DataCloud_POC_BEN_Box_D00CE23E__dlm</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>DataCloudDataChange</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>
